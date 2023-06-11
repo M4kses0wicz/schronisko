@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$bg-color: rgb(236, 244, 251);
+
+@mixin flex-center($fd) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $fd;
+}
+
+::-webkit-scrollbar {
+  background: orange;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(219, 250, 255, 0.7);
+  border-radius: 3px;
+}
+
+body {
+  .quote {
+    width: 100%;
+    height: 250px;
+    background: $bg-color;
+    @include flex-center(column);
+  }
+  .line {
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+    width: 70px;
+    height: 3px;
+    background: orange;
+    margin: 35px 0px 25px 0px;
+  }
+  .main-img-bg-container {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100vh;
+    background: url(man-with-dog.jpg);
+    background-size: cover;
+    background-position: bottom -90px left 50%;
+    background-attachment: fixed;
+  }
+  main {
+    width: 100%;
+    position: relative;
+    height: 100vh;
+    font-family: sans-serif, "lato";
+    color: white;
+    text-shadow: 0px 0px 5px black;
+    @include flex-center(column);
+    h1 {
+      width: 1050px;
+      font-size: 3.5rem;
+      text-align: center;
+      margin: 40px 0px 50px 0px;
+      text-transform: uppercase;
+    }
+    .button {
+      @include flex-center(row);
+      &:hover {
+        a {
+          background: rgb(255, 149, 0);
+          color: white;
+          transform: scale(105%);
+        }
+
+        span {
+          opacity: 100%;
+          color: white;
+          transform: translateX(140px);
+        }
+      }
+      span {
+        color: rgb(255, 255, 255);
+        font-weight: 600;
+        transform: translateX(100px) translateY(-3px);
+        text-shadow: 0px 0px 3px black;
+        transition: 0.5s;
+        opacity: 10%;
+        position: absolute;
+        z-index: 0;
+      }
+      a {
+        text-decoration: none;
+        position: absolute;
+        z-index: 1;
+        box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.5);
+        font-weight: 600;
+        color: rgb(27, 27, 27);
+        background: rgb(215, 145, 15);
+        font-family: sans-serif, "lato";
+        padding: 15px 40px 15px 40px;
+        text-shadow: none;
+        text-align: center;
+        border-radius: 100px;
+        transition: 0.5s;
+      }
+    }
+  }
+  header {
+    nav {
+      display: flex;
+      background: #00000021;
+      justify-content: space-around;
+      position: fixed;
+      backdrop-filter: blur(2px) grayscale(60%);
+      z-index: 10;
+      width: 100%;
+      ol {
+        display: flex;
+        list-style-type: none;
+        li {
+          margin: 15px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: 0.3s;
+          &:hover {
+            transform: scale(115%);
+            a {
+              color: white;
+            }
+          }
+          a {
+            transition: 0.3s;
+            text-decoration: none;
+            color: rgb(226, 226, 226);
+            font-family: sans-serif, "lato";
+            font-size: 14px;
+          }
+        }
+      }
+      .img-container {
+        img {
+          width: 80px;
+          mix-blend-mode: color-burn;
+          filter: drop-shadow(0px 0px 10px black) saturate(5) grayscale(20%);
+        }
+      }
+    }
+  }
+}
