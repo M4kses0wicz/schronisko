@@ -4,23 +4,62 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 ::-webkit-scrollbar {
-  background: orange;
+  background: rgb(50, 31, 7);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(219, 250, 255, 0.7);
+  background: rgb(255, 187, 0);
   border-radius: 3px;
 }
 
+:root {
+  font-size: 1vw;
+}
+
+body {
+  background: rgb(236, 244, 251);
+}
 body .quote {
   width: 100%;
-  height: 250px;
   background: rgb(236, 244, 251);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-family: "lato";
+}
+body .quote p:first-of-type {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+body .quote p:first-of-type::before {
+  content: "''";
+  display: block;
+  font-family: "Ephesis";
+  font-size: 350px;
+  rotate: 180deg;
+  opacity: 75%;
+  height: 25%;
+}
+body .quote p:first-of-type::after {
+  content: "''";
+  font-family: "Ephesis";
+  font-size: 350px;
+  opacity: 75%;
+  height: 25%;
+}
+body .quote p:nth-of-type(2) {
+  font-size: 4rem;
+  font-family: "Ephesis";
+  margin-bottom: 100px;
 }
 body .line {
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
@@ -34,10 +73,11 @@ body .main-img-bg-container {
   z-index: 0;
   width: 100%;
   height: 100vh;
-  background: url(man-with-dog.jpg);
+  background: url(/style/img/man-with-dog.jpg);
   background-size: cover;
   background-position: bottom -90px left 50%;
   background-attachment: fixed;
+  filter: brightness(50%);
 }
 body main {
   width: 100%;
@@ -53,28 +93,28 @@ body main {
 }
 body main h1 {
   width: 1050px;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   text-align: center;
   margin: 40px 0px 50px 0px;
   text-transform: uppercase;
 }
-body main .button {
+body main button {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
 }
-body main .button:hover a {
+body main button:hover a {
   background: rgb(255, 149, 0);
   color: white;
   transform: scale(105%);
 }
-body main .button:hover span {
+body main button:hover span {
   opacity: 100%;
   color: white;
-  transform: translateX(140px);
+  transform: translateX(170px);
 }
-body main .button span {
+body main button span {
   color: rgb(255, 255, 255);
   font-weight: 600;
   transform: translateX(100px) translateY(-3px);
@@ -84,7 +124,7 @@ body main .button span {
   position: absolute;
   z-index: 0;
 }
-body main .button a {
+body main button a {
   text-decoration: none;
   position: absolute;
   z-index: 1;
@@ -98,16 +138,16 @@ body main .button a {
   text-align: center;
   border-radius: 100px;
   transition: 0.5s;
+  font-size: 0.75rem;
 }
 body header nav {
   display: flex;
-  background: rgba(0, 0, 0, 0.1294117647);
   justify-content: space-around;
   position: fixed;
-  -webkit-backdrop-filter: blur(2px) grayscale(60%);
-          backdrop-filter: blur(2px) grayscale(60%);
+  backdrop-filter: blur(2px);
   z-index: 10;
   width: 100%;
+  padding: 5px;
 }
 body header nav ol {
   display: flex;
@@ -120,21 +160,26 @@ body header nav ol li {
   align-items: center;
   transition: 0.3s;
 }
-body header nav ol li:hover {
-  transform: scale(115%);
+body header nav ol li a:hover {
+  color: orange;
+  transform: scale(105%);
 }
-body header nav ol li:hover a {
-  color: white;
+body header nav ol li a:not(:hover) a {
+  color: red !important;
 }
 body header nav ol li a {
   transition: 0.3s;
   text-decoration: none;
   color: rgb(226, 226, 226);
-  font-family: sans-serif, "lato";
-  font-size: 14px;
+  font-family: "lato";
+  font-size: 0.75rem;
 }
 body header nav .img-container img {
   width: 80px;
   mix-blend-mode: color-burn;
-  filter: drop-shadow(0px 0px 10px black) saturate(5) grayscale(20%);
+  transition: 0.25s;
+  filter: drop-shadow(0px 0px 20px black) saturate(5) grayscale(20%) brightness(80%);
+}
+body header nav .img-container img:hover {
+  scale: 105%;
 }/*# sourceMappingURL=style.css.map */

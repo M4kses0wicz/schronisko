@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Schronisko :: Strona Główna</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style/style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,40 +18,55 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ephesis&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <section class="main-img-bg-container"></section>
+
     <header>
       <nav>
         <div class="img-container">
-          <a href="index.html"><img src="logo.png" alt="logo" /></a>
+          <a href="index.html"><img src="/style/img/logo.png" alt="logo" /></a>
         </div>
         <ol>
-          <li><a href="#">Start</a></li>
-          <li><a href="#">O nas</a></li>
+          <li><a href="#main">Start</a></li>
+          <li><a href="#work-with-us">O nas</a></li>
           <li><a href="#">Kontakt</a></li>
           <li><a href="#">Zaadoptuj</a></li>
         </ol>
       </nav>
     </header>
-    <main>
+
+    <main id="main">
       <div class="subheading">
         <h2>Schronisko Wrocław</h2>
       </div>
       <div class="line"></div>
       <h1>Odnajdź swojego nowego przyjaciela!</h1>
-      <div class="button">
+      <button>
         <a href="#">Zaadoptuj już teraz!</a>
         <span class="material-symbols-outlined"> arrow_right_alt </span>
-      </div>
+      </button>
     </main>
+
     <section class="quote">
       <p>
-        "Spójrz swojemu psu w oczy i spróbuj ponownie powiedzieć, że zwierzęta
-        nie mają duszy."
+        Spójrz swojemu psu w oczy i spróbuj ponownie powiedzieć, że zwierzęta
+        nie mają duszy.
       </p>
       <p>- Wiktor Hugo</p>
     </section>
+
+    <section id="work-with-us">
+      <div class="card"></div>
+      <div class="card"></div>
+    </section>
+
     <script src="script.js"></script>
   </body>
 </html>
