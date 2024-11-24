@@ -157,8 +157,7 @@ body {
           align-items: center;
           transition: 0.3s;
           a:hover {
-            color: $orange;
-            transform: scale(105%);
+            transform: scale(110%);
           }
           a:not(:hover) {
             a {
@@ -177,16 +176,25 @@ body {
       .logo-container {
         @include flex-center(row);
         span {
-          mix-blend-mode: color-burn;
           transition: 0.25s;
-          color: white;
+          color: rgb(247, 247, 247);
           font-size: 2rem;
           &:hover {
-            scale: 105%;
-            color: $orange;
+            scale: 110%;
           }
         }
       }
+      mix-blend-mode: difference;
+    }
+  }
+  #work-with-us {
+    width: 100%;
+    @include flex-center(row);
+    gap: 25%;
+    .card {
+      height: 700px;
+      width: 400px;
+      border: red solid 1px;
     }
   }
 }

@@ -139,6 +139,7 @@ body header nav {
   z-index: 10;
   width: 100%;
   padding: 5px;
+  mix-blend-mode: difference;
 }
 body header nav ol {
   display: flex;
@@ -152,8 +153,7 @@ body header nav ol li {
   transition: 0.3s;
 }
 body header nav ol li a:hover {
-  color: #ff7300;
-  transform: scale(105%);
+  transform: scale(110%);
 }
 body header nav ol li a:not(:hover) a {
   color: red !important;
@@ -172,12 +172,23 @@ body header nav .logo-container {
   flex-direction: row;
 }
 body header nav .logo-container span {
-  mix-blend-mode: color-burn;
   transition: 0.25s;
-  color: white;
+  color: rgb(247, 247, 247);
   font-size: 2rem;
 }
 body header nav .logo-container span:hover {
-  scale: 105%;
-  color: #ff7300;
+  scale: 110%;
+}
+body #work-with-us {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 25%;
+}
+body #work-with-us .card {
+  height: 700px;
+  width: 400px;
+  border: red solid 1px;
 }/*# sourceMappingURL=style.css.map */
